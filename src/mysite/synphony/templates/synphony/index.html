@@ -190,10 +190,15 @@ The participants can listen the songs, comment the songs. -->
 
     var x = setInterval(function () {
         var now = new Date();
-        var distance = now - time;
+        utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+        offset = -5;//database use NY time, offset to UTC = -5
+        var nyLocalNow = new Date(utc + (3600000*offset));
+        
         var st = new Date({{ startTime }});
         var en = new Date({{ endTime }});
-        var distance = en - now;
+       
+        var distance = en - nyLocalNow;
+        
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
         var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
