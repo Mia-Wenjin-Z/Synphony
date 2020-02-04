@@ -1,5 +1,7 @@
 # Introduction
 
+Deployed Site: [Synphony](https://frozen-castle-16239.herokuapp.com/synphony/f2cf06134a832e35)
+
 Synphony is a real-time music sharing web application. The word is made up of the idea to "**Syn**chronize your sym**phony**)". Whenever lovers, friends, co-workers, or families <u>hope to listen to music in synchronization</u>, Synphony is the right product to use.
 
 A user of Synphony can:
